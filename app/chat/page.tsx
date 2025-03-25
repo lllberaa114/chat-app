@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Loader2, Send, Plus } from 'lucide-react';
 import type { Database } from '@/lib/database.types';
+import { useToast } from '@/hooks/use-toast';
 
 type Message = Database['public']['Tables']['messages']['Row'] & {
   user: Database['public']['Tables']['users']['Row'];
